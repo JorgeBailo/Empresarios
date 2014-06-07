@@ -1,4 +1,13 @@
-/nbproject/private/
+# Ignore netbeans
+nbproject/private/
+build/
+nbbuild/
+dist/
+nbdist/
+nbactions.xml
+nb-configuration.xml
+
+# Ignore Silex
 /phpunit.xml
 /vendor
 /build
