@@ -1,0 +1,46 @@
+<aside id="sidebar" class="col-1-3">
+    <div class="wrap-col">
+        <div class="box">
+            <div class="heading"><h2>Quienes Somos</h2></div>
+            <div class="content">
+                {{ config.aboutshort|raw }}           
+            </div>
+        </div>
+        <div class="box">
+            <div class="content">
+                <ul>
+                    {% for page in site.pages %}
+                        {{ _self.menu(page) }}
+                    {% endfor %}
+                    <li><a href="{{ url('contacto') }}" title="Contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+        {% if home != "false" %}
+        <div class="box">
+            <div class="heading">
+                <h2>Agenda</h2>
+            </div>
+            <div class="content">
+                {% for evento in agenda.eventos %}
+                    {{ _self.agenda(evento) }}
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</aside>
+
+
+{% macro menu(page) %}
+    {% if page.name != "Portada" %}
+        <li><a href="{{ path('page', { 'slug': page.slug }) }}" title="{{ page.name }}">{{ page.menu }}</a></li>
+    {% endif %}
+{% endmacro %}
+
+{% macro agenda(evento) %}
+<div class="post">
+    <h4>{{ evento.name }}</h4>
+    <p>{{ evento.date }}</p>
+</div>
+{% endmacro %}

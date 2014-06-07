@@ -1,0 +1,26 @@
+{% extends 'layout.twig' %}
+
+{% block title page.title %}
+{% block content %}
+<!--------------Content--------------->
+<section id="content">
+    <div class="wrap-content">
+        <div class="row block">
+            <div id="main-content" class="col-2-3">
+                <div class="wrap-col">
+                    <article>
+                        <div class="heading">
+                            <h2>{{page.name}}</h2>
+                        </div>
+                        <div class="content">
+                            <p>  {{ page.content|raw }} </p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <!-- Aside -->
+            {% include '_aside.twig' with { 'agenda': agenda, 'config': config, 'site': site, "home": "false" } %}
+	</div>
+    </div>
+</section>
+{% endblock %}

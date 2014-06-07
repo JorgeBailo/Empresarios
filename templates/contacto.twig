@@ -1,0 +1,29 @@
+{% extends 'layout.twig' %}
+
+{% block title "Contacto | Horeca - Asociación Profesional de Empresarios de Hoteles y Restaurantes de Zaragoza" %}
+{% block content %}
+<!--------------Content--------------->
+<section id="content">
+    <div class="wrap-content">
+        <div class="row block">
+            <div id="main-content" class="col-2-3">
+                <div class="wrap-col">
+                    <article>
+                        <div class="heading">
+                            <h2>Contacto</h2>
+                        </div>
+                        <div class="content">
+                            <form action="{{ path('contacto') }}" method="post" id="contact-form">
+                                {{ form_widget(form) }}
+                                <input type="submit" name="submit" class="button" value="Enviar" />
+                            </form>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            <!-- Aside -->
+            {% include '_aside.twig' with { 'agenda': agenda, 'config': config, 'site': site, "home": "false" } %}
+	</div>
+    </div>
+</section>
+{% endblock %}

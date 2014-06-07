@@ -1,0 +1,29 @@
+{
+  "eventos": [
+    {
+      "name" : "Conferencia Anual Hoteles",
+      "date" : "27 Junio 2014",
+      "place" : "Madrid"
+    },
+    {
+      "name" : "Conferencia Anual Restaurantes",
+      "date" : "27 Agosto 2014",
+      "place" : "Barcelona"
+    },
+    {
+      "name" : "Jornada Puertas Abiertas",
+      "date" : "27 Octubre 2014",
+      "place" : "Zaragoza"
+    },
+    {
+      "name" : "Premios Mejor Hotel 2014",
+      "date" : "27 Noviembre 2014",
+      "place" : "Sevilla"
+    },
+    {
+      "name" : "Premios Mejor Restaurante 2014",
+      "date" : "27 Diciembre 2014",
+      "place" : "Málaga"
+    }
+  ]
+}

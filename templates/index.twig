@@ -1,0 +1,42 @@
+{% extends 'layout.twig' %}
+
+{% block title config.title %}
+{% block content %}
+<!--------------Content--------------->
+<section id="content">
+    <div class="wrap-content">
+        <div class="row block">
+            <div id="main-content" class="col-2-3">
+                <div class="wrap-col">
+                    <article>
+                        <div class="heading">
+                            <h2>HORECA</h2>
+                        </div>
+                        <div class="content">
+                            <img src="{{ app.request.basepath }}/images/logos/logo.gif" />
+                            <p>  {{ config.aboutlarge|raw }} </p>
+                        </div>
+                    </article>
+                    {% for asociacion in asoc.asociaciones %}
+                        {{ _self.asociaciones(asociacion) }}
+                    {% endfor %}
+                </div>
+            </div>
+            <!-- Aside -->
+            {% include '_aside.twig' with { 'agenda': agenda, 'config': config, 'site': site, "home": "true" } %}
+	</div>
+    </div>
+</section>
+{% endblock %}
+
+{% macro asociaciones(asociacion) %}
+    <article>
+        <div class="heading">
+            <h2> <a href="{{ asociacion.web }}" title="{{ asociacion.name }}">{{ asociacion.name }}</a></h2>
+        </div>
+        <div class="content">
+                <img src="{{ app.request.basepath }}/images/logos/{{ asociacion.image }}" />
+                <p> {{ asociacion.description|raw }} </p>
+        </div>
+    </article>
+{% endmacro %}

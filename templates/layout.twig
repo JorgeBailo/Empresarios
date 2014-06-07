@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="initial-scale=1.0, width=device-width">
+        <title>{% block title '' %}</title>
+        
+        <!-- Stylesheets -->
+        {% for asset in ['style.css', 'responsive.css'] %}
+        <link rel="stylesheet" href="{{ app.request.basepath }}/css/{{ asset }}" type="text/css" media="screen">
+        {% endfor %}
+        
+        <!-- IE8 / IE9 -->
+        {% include '_ie.twig' %}
+        
+    </head>
+    <body>
+        <div class="wrap-body grid">
+            <!-- Header -->
+            {% include '_header.twig' with { 'name': config.name, 'description': config.description } %}
+            <!-- Content -->
+            {% block content %}{% endblock %}
+            <!-- Footer -->
+            {% include '_footer.twig' with { 'asoc': asoc, 'config': config } %}
+        </div>
+    </body>
+</html>

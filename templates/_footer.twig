@@ -1,0 +1,48 @@
+<footer>
+    <div class="wrap-footer">
+        <div class="row">
+            <div class="col-1-3">
+                <div class="wrap-col">
+                    <div class="box">
+                        <div class="heading"><h2>Asociaciones</h2></div>
+                            <div class="content gallery">
+                                {% for asociacion in asoc.asociaciones %}
+                                    {{ _self.asociaciones(asociacion) }}
+                                {% endfor %}
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1-3">
+                <div class="wrap-col">
+                    <div class="box">
+                        <div class="heading"><h2>Sobre Nosotros</h2></div>
+                            <div class="content">
+                                <p>{{ config.aboutshort }}</p>
+                            </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-1-3">
+                    <div class="wrap-col">
+                            <div class="box">
+                                    <div class="heading"><h2>Contacto</h2></div>
+                                    <div class="content">
+                                        <p>{{ config.title }}</p>
+                                        <p>Dirección: {{ config.address }}</p>
+                                        <p>Teléfono : {{ config.telephone }}</p>
+                                        <p>Fax      : {{ config.fax }}</p>
+                                    </div>
+                            </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+            Copyright &copy; {{ 'now'|date('Y') }} - {{ config.title }}
+    </div>
+</footer>
+
+{% macro asociaciones(asociacion) %}
+    <a href="{{ asociacion.web }}" title="{{ asociacion.name }}"><img src="{{ app.request.basepath }}/images/logos/{{ asociacion.image }}" width="120" heigth="70"/></a>     
+{% endmacro %}

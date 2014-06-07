@@ -1,0 +1,38 @@
+<header>
+    <div class="wrap-header">
+        <div class="top">
+            <div class="socials">
+                <ul>
+                    <li><a href="#" title="facebook"><img src="{{ app.request.basepath }}/images/socials/facebook-32x32.png"/></a></li>
+                    <li><a href="#" title="google"><img src="{{ app.request.basepath }}/images/socials/google-32x32.png"/></a></li>
+                    <li><a href="#" title="twitter"><img src="{{ app.request.basepath }}/images/socials/twitter-32x32.png"/></a></li>
+                    <li><a href="#" title="rss"><img src="{{ app.request.basepath }}/images/socials/rss-32x32.png"/></a></li>
+                    <li><a href="#" title="youtube"><img src="{{ app.request.basepath }}/images/socials/youtube-32x32.png"/></a></li>
+                </ul>
+            </div>
+        </div>
+        <div id="logo">
+                <a href="{{ url('homepage') }}"><h1> {{ name }} </h1></a>
+                <p>{{ description }}</p>
+        </div>
+        <nav>
+           <div class="wrap-nav">
+                <div class="menu">
+                    <ul>
+                        <li><a href="{{ url('homepage') }}" title="Home">Home</a></li>
+                        {% for page in site.pages %}
+                            {{ _self.menu(page) }}
+                        {% endfor %}
+                        <li><a href="{{ url('contacto') }}" title="Contacto">Contacto</a></li>
+                    </ul>
+                </div>
+           </div>
+        </nav>
+    </div>
+</header>
+                    
+{% macro menu(page) %}
+    {% if page.menu != "Portada" and page.menu != "Cursos Desempleados" and page.menu != "Cursos Autónomos" %}
+        <li><a href="{{ path('page', { 'slug': page.slug }) }}" title="{{ page.name }}">{{ page.menu }}</a></li>
+    {% endif %}
+{% endmacro %}                    

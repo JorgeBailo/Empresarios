@@ -1,0 +1,22 @@
+{
+  "asociaciones": [
+    {
+      "name"    : "Asociación de Restaurantes de Zaragoza",
+      "web"     : "http://www.restauranteszaragoza.org/",
+      "image"   : "restaurantes.jpg",
+      "description": "Desde la <strong>Asociación de Empresarios de Restaurantes de Zaragoza – HORECA</strong>,  queremos informarte sobre los servicios que ofertamos a los restaurantes asociados, e invitarte a que asocies a tu establecimiento, para conseguir entre todos, un sector más competitivo y con mayor capacidad de  negociación con la administración.</p>\n<p style='text-align: justify;'><strong>Horeca cuenta con un equipo de colaboradores</strong> que te asesorarán en todos aquellos aspectos que conforman el día a día de tu actividad facilitando con ello la <strong>planificación tu empresa</strong>."
+    },
+    {
+      "name"    : "Asociación de Hoteles de Zaragoza",
+      "web"     : "http://www.hotelesdezaragoza.org/bienvenida.php",
+      "image"   : "hoteles.jpg",
+      "description": "Desde la <strong>Asociación de Empresarios de Hoteles y Restaurantes de Zaragoza – HORECA</strong>,  queremos informarte sobre los servicios que ofertamos a los restaurantes asociados, e invitarte a que asocies a tu establecimiento, para conseguir entre todos, un sector más competitivo y con mayor capacidad de  negociación con la administración.</p>\n<p><strong>Horeca cuenta con un equipo de colaboradores</strong> que te asesorarán en todos aquellos aspectos que conforman el día a día de tu actividad facilitando con ello la <strong>planificación tu empresa</strong>."
+    },
+    {
+      "name"    : "Cursos de formación en hostelería",
+      "web"     : "http://www.horecazaragoza.com/formacion",
+      "image"   : "formacion.jpg",
+      "description": "La Federación de Empresarios de Hostelería de Zaragoza HORECA integra a la Asociación de Restaurantes de Zaragoza, y a la Asociación de Hoteles de Zaragoza, <strong>con más de 350 empresas asociadas reúne al 90% de los hoteles de la provincia y a más del 50% de los Restaurantes</strong>.</p>\n<p>Los fines genéricos de la Federación son la defensa de los intereses del sector, junto con la promoción de todo cuanto contribuya a fomentar el prestigio de la profesión. El interés de la Federación por la formación, se materializa en el año 1998 con la apertura del centro de formación HORECA FORMACIÓN."
+    }
+  ]
+}
